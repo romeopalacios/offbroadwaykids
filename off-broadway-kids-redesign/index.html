@@ -11,8 +11,10 @@
 <body>
   <header class="site-header" data-header>
     <a class="brand" href="index.html" aria-label="Off Broadway Kids home">
-      <span class="brand-mark">OBK</span>
-      <span class="brand-name">Off Broadway Kids</span>
+      <picture>
+        <source media="(max-width: 640px)" srcset="assets/off-broadway-kids-logo-mobile.webp" />
+        <img class="brand-logo" src="assets/off-broadway-kids-logo.webp" alt="Off Broadway Kids" />
+      </picture>
     </a>
     <nav class="desktop-nav" aria-label="Primary navigation">
       <a href="#about">About</a>
@@ -39,12 +41,10 @@
       <div class="hero-media"><img src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/1318406e-6174-41d5-8264-76a0b1273d92/DSC_6806.jpg" alt="Young performers on stage" /></div>
       <div class="hero-overlay"></div>
       <div class="hero-content container reveal">
-        <p class="eyebrow light">Youth musical theater • Los Angeles</p>
         <h1>Where young<br><em>performers</em><br>take the stage.</h1>
         <p class="hero-copy">Immersive theater experiences that build confidence, creativity, friendship and a lifelong love of performing.</p>
         <div class="hero-actions"><a class="button" href="programs.html">Explore Programs</a><a class="text-link light" href="#gallery">See Our Productions <span>↗</span></a></div>
       </div>
-      <div class="scroll-cue">Scroll to discover <span>↓</span></div>
     </section>
 
     <section class="intro-strip" aria-label="Highlights">
@@ -97,15 +97,16 @@
       </div>
     </section>
 
-    <section class="section values">
-      <div class="container"><div class="section-heading center reveal"><p class="eyebrow light">More than a performance</p><h2>Built for the <em>person</em><br>behind the performer.</h2></div>
-      <div class="value-grid"><article><strong>01</strong><h3>Confidence</h3><p>Take creative risks, use your voice and own the stage.</p></article><article><strong>02</strong><h3>Creativity</h3><p>Explore acting, music, movement and character.</p></article><article><strong>03</strong><h3>Community</h3><p>Build friendships through shared rehearsal and performance.</p></article><article><strong>04</strong><h3>Performance</h3><p>Experience the thrill of bringing a complete show to life.</p></article></div></div>
-    </section>
-
     <section class="section gallery" id="gallery">
       <div class="container gallery-head reveal"><div><p class="eyebrow">On stage</p><h2>Moments that feel<br><em>bigger than life.</em></h2></div><p>Real rehearsals. Real productions. Real confidence growing under the lights.</p></div>
-      <div class="gallery-grid" data-gallery>
-        <button class="gallery-item tall" data-src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/667be713-2ffe-4e6f-93d2-9550baf9aaf8/Seussical-3663.jpg"><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/667be713-2ffe-4e6f-93d2-9550baf9aaf8/Seussical-3663.jpg" alt="Seussical performance" /></button>
+      <div class="theater-slideshow reveal" data-slideshow aria-label="Production photo slideshow">
+        <div class="theater-valance" aria-hidden="true"></div>
+        <div class="curtain curtain-left" aria-hidden="true"></div>
+        <div class="curtain curtain-right" aria-hidden="true"></div>
+        <div class="stage-frame">
+          <div class="stage-lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="gallery-grid" data-gallery aria-live="polite">
+        <button class="gallery-item tall is-active" data-src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/667be713-2ffe-4e6f-93d2-9550baf9aaf8/Seussical-3663.jpg"><img loading="eager" src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/667be713-2ffe-4e6f-93d2-9550baf9aaf8/Seussical-3663.jpg" alt="Seussical performance" /></button>
         <button class="gallery-item" data-src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/06fdc049-9627-42b3-b63d-c5186b45a2ea/Seussical-3555.jpg"><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/06fdc049-9627-42b3-b63d-c5186b45a2ea/Seussical-3555.jpg" alt="Young performers in red costumes" /></button>
         <button class="gallery-item" data-src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/997cde6d-2b16-4082-8f26-7fdef841cf58/DSC_3230-Enhanced-NR.jpg"><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/997cde6d-2b16-4082-8f26-7fdef841cf58/DSC_3230-Enhanced-NR.jpg" alt="Children performing a musical number" /></button>
         <button class="gallery-item wide" data-src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/7fa0b95e-b186-4bcf-a3df-e772a8b12080/Seussical-3505.jpg"><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/7fa0b95e-b186-4bcf-a3df-e772a8b12080/Seussical-3505.jpg" alt="Full Seussical cast on stage" /></button>
@@ -115,6 +116,13 @@
         <button class="gallery-item" data-src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/1763888960704-4XJH71WEWJMUFH0LB3PK/DSC_6838.jpg"><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/1763888960704-4XJH71WEWJMUFH0LB3PK/DSC_6838.jpg" alt="Ensemble performance" /></button>
         <button class="gallery-item wide" data-src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/1763889008287-KILEAVQK268XWS5I6IN6/DSC_3460-Enhanced-NR.jpg"><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/1763889008287-KILEAVQK268XWS5I6IN6/DSC_3460-Enhanced-NR.jpg" alt="Musical cast dancing" /></button>
         <button class="gallery-item" data-src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/d3d2d524-3335-45a7-ac88-bf8bf88e16d0/Seussical-3909.jpg"><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/d3d2d524-3335-45a7-ac88-bf8bf88e16d0/Seussical-3909.jpg" alt="Cat in the Hat from behind" /></button>
+          </div>
+        </div>
+        <div class="slideshow-controls">
+          <button type="button" class="slide-arrow" data-slide-prev aria-label="Previous production photo">←</button>
+          <div class="slide-dots" data-slide-dots aria-label="Choose a production photo"></div>
+          <button type="button" class="slide-arrow" data-slide-next aria-label="Next production photo">→</button>
+        </div>
       </div>
       <details class="archive-images container"><summary>View more original site images</summary><div class="archive-grid">
         <img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/51dd0da8-1a1d-4014-b666-78a9c39e1401/IMG_6401%2Bcopy.png" alt="Youth showcase" />
@@ -142,7 +150,7 @@
     <section class="final-cta"><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/67d76eadf82f2f4c7ae123e5/7fa0b95e-b186-4bcf-a3df-e772a8b12080/Seussical-3505.jpg" alt="Full cast on stage" /><div class="final-overlay"></div><div class="final-content reveal"><p>The stage is waiting.</p><h2>Let them find their spotlight.</h2><a class="button button-light" href="programs.html">Explore Programs</a></div></section>
   </main>
 
-  <footer class="footer"><div class="container footer-grid"><div><div class="brand footer-brand"><span class="brand-mark">OBK</span><span class="brand-name">Off Broadway Kids</span></div><p>Play now. Perform later.</p></div><div><h3>Explore</h3><a href="#about">About</a><a href="programs.html">Programs</a><a href="team.html">Team</a><a href="#gallery">Gallery</a></div><div><h3>Connect</h3><a href="#contact">Contact</a><a href="https://www.instagram.com/offbroadwaykids/?hl=en" target="_blank" rel="noreferrer">Instagram ↗</a></div><div class="newsletter"><h3>News + updates</h3><form onsubmit="event.preventDefault()"><input type="email" placeholder="Email address" aria-label="Email address"><button type="submit">Join ↗</button></form></div></div><div class="container footer-bottom"><span>© 2026 Off Broadway Kids</span><span>Built for the stage.</span></div></footer>
+  <footer class="footer"><div class="container footer-grid"><div><div class="brand footer-brand"><picture><source media="(max-width: 640px)" srcset="assets/off-broadway-kids-logo-mobile.webp"><img class="brand-logo" src="assets/off-broadway-kids-logo.webp" alt="Off Broadway Kids"></picture></div><p>Play now. Perform later.</p></div><div><h3>Explore</h3><a href="#about">About</a><a href="programs.html">Programs</a><a href="team.html">Team</a><a href="#gallery">Gallery</a></div><div><h3>Connect</h3><a href="#contact">Contact</a><a href="https://www.facebook.com/offbroadwaykids?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.instagram.com/offbroadwaykids?igsh=NTc4MTIwNjQ2YQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@off.broadway.kids?lang=en" target="_blank" rel="noopener noreferrer">TikTok ↗</a></div><div class="newsletter"><h3>News + updates</h3><form onsubmit="event.preventDefault()"><input type="email" placeholder="Email address" aria-label="Email address"><button type="submit">Join ↗</button></form></div></div><div class="container footer-bottom"><span>© 2026 Off Broadway Kids</span><span>Built for the stage.</span></div></footer>
 
   <div class="lightbox" data-lightbox aria-hidden="true"><button class="lightbox-close" data-lightbox-close aria-label="Close image">×</button><img src="" alt="Expanded gallery view" data-lightbox-image></div>
   <script src="js/main.js"></script>
