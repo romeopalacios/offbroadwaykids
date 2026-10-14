@@ -34,13 +34,17 @@ const shouldOpenCurtain = document.querySelector('.hero')
 if (shouldOpenCurtain) {
   const resetOpeningScroll = () => {
     if (location.hash) return;
+    const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
     scrollTo(0, 0);
+    document.documentElement.style.scrollBehavior = previousScrollBehavior;
   };
   if ('scrollRestoration' in history && !location.hash) {
     history.scrollRestoration = 'manual';
   }
   resetOpeningScroll();
-  addEventListener('pageshow', resetOpeningScroll, { once: true });
+  addEventListener('pageshow', resetOpeningScroll);
+  addEventListener('load', resetOpeningScroll, { once: true });
 
   const entrance = document.createElement('div');
   entrance.className = 'site-opening-curtain';
@@ -53,11 +57,12 @@ if (shouldOpenCurtain) {
     entrance.classList.add('is-open');
   }));
   setTimeout(() => {
+    resetOpeningScroll();
     entrance.remove();
     document.body.classList.remove('curtain-opening');
-    if ('scrollRestoration' in history && !location.hash) {
-      history.scrollRestoration = 'auto';
-    }
+    requestAnimationFrame(() => {
+      document.documentElement.style.scrollBehavior = '';
+    });
   }, 2100);
 }
 

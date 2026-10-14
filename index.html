@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Off Broadway Kids creates immersive musical theater experiences for children and youth through productions, showcases, camps and classes." />
   <title>Off Broadway Kids | Youth Musical Theater</title>
+  <script>
+    if (matchMedia('(max-width: 640px)').matches && !location.hash) {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      document.documentElement.style.scrollBehavior = 'auto';
+      scrollTo(0, 0);
+    }
+  </script>
   <link rel="preconnect" href="https://images.squarespace-cdn.com" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -153,6 +160,6 @@
   <footer class="footer"><div class="container footer-grid"><div><div class="brand footer-brand"><picture><source media="(max-width: 640px)" srcset="assets/off-broadway-kids-logo-mobile.webp"><img class="brand-logo" src="assets/off-broadway-kids-logo.webp" alt="Off Broadway Kids"></picture></div><p>Play now. Perform later.</p></div><div><h3>Explore</h3><a href="#about">About</a><a href="programs.html">Programs</a><a href="team.html">Team</a><a href="#gallery">Gallery</a></div><div><h3>Connect</h3><a href="#contact">Contact</a><a href="https://www.facebook.com/offbroadwaykids?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook <span class="arrow-icon" aria-hidden="true"></span></a><a href="https://www.instagram.com/offbroadwaykids?igsh=NTc4MTIwNjQ2YQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram <span class="arrow-icon" aria-hidden="true"></span></a><a href="https://www.tiktok.com/@off.broadway.kids?lang=en" target="_blank" rel="noopener noreferrer">TikTok <span class="arrow-icon" aria-hidden="true"></span></a></div><div class="newsletter"><h3>News + updates</h3><form onsubmit="event.preventDefault()"><input type="email" placeholder="Email address" aria-label="Email address"><button type="submit">Join <span class="arrow-icon" aria-hidden="true"></span></button></form></div></div><div class="container footer-bottom"><span>© 2026 Off Broadway Kids</span><span>Built for the stage.</span></div></footer>
 
   <div class="lightbox" data-lightbox aria-hidden="true"><button class="lightbox-close" data-lightbox-close aria-label="Close image">×</button><img src="" alt="Expanded gallery view" data-lightbox-image></div>
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 </html>
