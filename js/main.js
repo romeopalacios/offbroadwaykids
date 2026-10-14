@@ -32,16 +32,32 @@ const shouldOpenCurtain = document.querySelector('.hero')
   && !matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 if (shouldOpenCurtain) {
+  const resetOpeningScroll = () => {
+    if (location.hash) return;
+    scrollTo(0, 0);
+  };
+  if ('scrollRestoration' in history && !location.hash) {
+    history.scrollRestoration = 'manual';
+  }
+  resetOpeningScroll();
+  addEventListener('pageshow', resetOpeningScroll, { once: true });
+
   const entrance = document.createElement('div');
   entrance.className = 'site-opening-curtain';
   entrance.setAttribute('aria-hidden', 'true');
   entrance.innerHTML = '<div class="opening-valance"></div><div class="opening-curtain opening-curtain-left"></div><div class="opening-curtain opening-curtain-right"></div><div class="opening-curtain-tie"></div>';
   document.body.prepend(entrance);
   document.body.classList.add('curtain-opening');
-  requestAnimationFrame(() => requestAnimationFrame(() => entrance.classList.add('is-open')));
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    resetOpeningScroll();
+    entrance.classList.add('is-open');
+  }));
   setTimeout(() => {
     entrance.remove();
     document.body.classList.remove('curtain-opening');
+    if ('scrollRestoration' in history && !location.hash) {
+      history.scrollRestoration = 'auto';
+    }
   }, 2100);
 }
 
